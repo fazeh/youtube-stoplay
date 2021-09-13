@@ -1,0 +1,40 @@
+{
+
+
+
+  "manifest_version": 2,
+
+  "name": "Youtube Stoplay",
+
+  "version": "0.0.0.1",
+
+  "description": "Playing sound effects on YouTube when forwarding and pausing the video",
+
+  "permissions": ["storage", "<all_urls>", "contextMenus"],
+
+  "icons": {
+
+    "48": "src/icons/pause-icon.png"
+
+  },
+
+
+
+  "content_scripts": [
+
+    {
+
+      "matches": [ 
+        "*://*.youtube.com/*",
+        "*://*.youtube-nocookie.com/*"
+      ],
+
+      "js": ["src/js/stoplay.js"]
+
+    }
+
+  ]
+
+
+
+}
